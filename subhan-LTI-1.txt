@@ -1,0 +1,47 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String []s1= {"abcd","xyw","aaa","aba"};
+		String []s2= {"axcd","drr","aca","uvw"};
+		
+		int []result= find(s1,s2);
+		for(int i=0;i<result.length;i++) {
+			System.out.println("Result of query "+s2[i]+" = "+result[i]);
+		}
+
+	}
+	public static int[] find(String Candies[],String querys[]) {
+		int resultIndex=0;
+		
+		int result[]=new int[querys.length];
+		for(String query:querys) {
+			char []queryArray=query.toCharArray();
+			for(int i=0;i<Candies.length;i++) {
+				int notEqual=0;
+				char []candieArray= Candies[i].toCharArray();
+				if(queryArray.length==candieArray.length) {
+					for(int j=0;j<queryArray.length;j++) {
+						if(candieArray[j]!=queryArray[j]) {
+							
+							notEqual++;
+//							System.out.println(notEqual+"query is: "+query+"  and candie is:  "+Candies[i]);
+						}
+					}
+					if(notEqual==1) {
+						result[resultIndex]++;
+						System.out.println(result[resultIndex]+"  for query  "+query +" and candie is "+Candies[i]);
+					}
+				}
+				else {
+					
+				}
+			}
+			resultIndex++;
+		}
+		
+		return result;
+	}
+
+}
