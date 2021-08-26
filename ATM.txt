@@ -1,0 +1,21 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.text.DecimalFormat;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println(atm(200.00,30));
+	}
+	public static double atm(double balance,double amount){
+	    if(amount%5==0&& balance>amount){
+	        balance-=amount+0.50;
+	        return balance;
+	    }
+	    return balance;
+	}
+}
