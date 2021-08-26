@@ -1,0 +1,32 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+		String s1="silent";
+		String s2="listee";
+		System.out.println(check(s1,s2));
+	}
+	public static boolean check(String s1,String s2){
+	    char []ar1=s1.toCharArray();
+	    char []ar2=s2.toCharArray();
+	    
+	    if(ar1.length!=ar2.length){
+	        return false;
+	    }
+	    
+	    Arrays.sort(ar1);
+	    Arrays.sort(ar2);
+	    for(int i=0;i<ar1.length;i++){
+	        if(ar1[i]!=ar2[i])
+	        return false;
+	    }
+	    return true;
+	} 
+}
