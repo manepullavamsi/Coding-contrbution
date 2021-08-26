@@ -1,0 +1,37 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+		pallindrome(123);
+	}
+	public static boolean pallindrome(int num){
+	    int temp=num;
+	    int sum=0;rev=0;
+	    while(temp>0){
+	        int rem=temp%10;
+	        sum+=rem;
+	        num/=10;
+	    }
+	    int tempsum=sum;
+	    while(tempsum>0)
+	    {
+	     int rem=tempsum%10;
+	     rev*=10+rem;
+	     tempsum/=10;
+	    }
+	    if(rev==sum){
+	        return true;
+	    }
+	    else{
+	        return false;
+	    }
+	    
+	}
+}
